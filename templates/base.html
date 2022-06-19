@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    {% block title %} {% endblock title %}
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <label for="logo"><a href="{% url 'blog-home' %}">Dapo Adedire</a> </label>
+        <nav>
+          {% block nav %}
+          {% endblock nav %}
+          
+        </nav>
+      </div>
+    </header>
+    <main>
+
+      {% block content %} 
+      
+      {% endblock content %}
+      
+      <aside>
+        <div class="about">
+          <div class="avatar">
+            <img src="{% static 'images/dapo-avatar.jpg' %}" alt="avatar" />
+          </div>
+          <div class="intro">
+            <p>
+              Engineering Student.<br />Open Source Contributor.<br />Full Stack
+              Web Developer.
+            </p>
+          </div>
+          <div class="socials">
+            <ul>
+              <li>
+                <a href="https://twitter.com/dapo_adedire" target="_blank"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/dapoadedire/" target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.github.com/dapoadedire" target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/dapo_adedire/" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <footer>
+     
+    <footer>
+      <div>
+        <p>
+          &copy; {% now 'Y' %} Dapo Adedire. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

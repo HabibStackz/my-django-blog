@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+<title>Home</title>
+{% endblock title %} {% block nav %}
+<ul>
+  <li><a class="active" href="{% url 'blog-home' %}">Home</a></li>
+  <li><a href="{% url 'blog-about' %}">About</a></li>
+  <li><a href="{% url 'blog-contact' %}">Contact</a></li>
+</ul>
+{% endblock nav %} {% block content %}
+<section class="home">
+  <div class="post">
+    <div class="blog-image">
+      <img src="{% static 'images/blog-1.jpg' %}" alt="avatar" />
+    </div>
+
+    <div class="blog-intro">
+      <h2>Adding Ckeditor to Django Blog</h2>
+      <p>JUNE 25, 2020 | DJANGO</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
+        quidem, dolorem, accusamus, quas, quis, dolore, molestias, eveniet,
+        eius.
+      </p>
+    </div>
+  </div>
+  <div class="post">
+    <div class="blog-image">
+        <img src="{% static 'images/blog-2.jpg' %}" alt="avatar" />
+      </div>
+  
+      <div class="blog-intro">
+        <h2>Adding Ckeditor to Django Blog</h2>
+        <p>JUNE 25, 2020 | DJANGO</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
+          quidem, dolorem, accusamus, quas, quis, dolore, molestias, eveniet,
+          eius.
+        </p>
+      </div>
+  </div>
+  <div class="post">
+    <div class="blog-image">
+        <img src="{% static 'images/blog-3.jpg' %}" alt="avatar" />
+      </div>
+  
+      <div class="blog-intro">
+        <h2>Adding Ckeditor to Django Blog</h2>
+        <p>JUNE 25, 2020 | DJANGO</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
+          quidem, dolorem, accusamus, quas, quis, dolore, molestias, eveniet,
+          eius.
+        </p>
+      </div>
+  </div>
+  <div class="post">
+    <div class="blog-image">
+        <img src="{% static 'images/blog-4.jpg' %}" alt="avatar" />
+      </div>
+  
+      <div class="blog-intro">
+        <h2>Adding Ckeditor to Django Blog</h2>
+        <p>JUNE 25, 2020 | DJANGO</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
+          quidem, dolorem, accusamus, quas, quis, dolore, molestias, eveniet,
+          eius.
+        </p>
+      </div>
+  </div>
+  <div class="post">
+    <div class="blog-image">
+        <img src="{% static 'images/blog-5.jpg' %}" alt="avatar" />
+      </div>
+  
+      <div class="blog-intro">
+        <h2>Adding Ckeditor to Django Blog</h2>
+        <p>JUNE 25, 2020 | DJANGO</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
+          quidem, dolorem, accusamus, quas, quis, dolore, molestias, eveniet,
+          eius.
+        </p>
+      </div>
+     
+  </div> 
+  <div class="post-next">
+    <div id="app" class="container">  
+        <ul class="page">
+            <li class="page__btn"><span class="material-icons">chevron_left</span></li>
+            <li class="page__numbers"> 1</li>
+            <li class="page__numbers active">2</li>
+            <li class="page__numbers">3</li>
+            <li class="page__numbers">4</li>
+            <li class="page__numbers">5</li>
+            <li class="page__numbers">6</li>
+            <li class="page__dots">...</li>
+            <li class="page__numbers"> 10</li>
+            <li class="page__btn"><span class="material-icons">chevron_right</span></li>
+          </ul>
+        </div>
+      </div>
+</section>
+{% endblock content %}
